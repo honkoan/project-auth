@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom'
 
 import { API_URL } from '../reusable/urls'
 
+import Logout from './Logout'
+
 import listitems from '../reducers/listitems'
 
 const Main = () => {
@@ -45,10 +47,13 @@ const Main = () => {
   return (
     <div className="wrapper">
       <div className="shoppinglist">
-        <h1>Your shopping list</h1>
+        <h1 className="title">Your shopping list</h1>
         {listitemsItems.map((list) => (
           <div key={list._id}>{list.message}</div>
         ))}
+        <div>
+          <Logout />
+        </div>
       </div>
       <div className="photo"></div>
     </div>

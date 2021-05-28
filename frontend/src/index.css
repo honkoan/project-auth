@@ -79,6 +79,9 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  overflow: auto;
 }
 
 .photo {
@@ -88,6 +91,12 @@ code {
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+
+.logout-button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 @media (max-width: 767px) {

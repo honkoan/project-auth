@@ -4,7 +4,7 @@ import { batch, useSelector, useDispatch } from 'react-redux'
 import user from '../reducers/user'
 import listitems from '../reducers/listitems'
 
-const Header = () => {
+const Logout = () => {
   const accessToken = useSelector(store => store.user.accessToken)
   const dispatch = useDispatch()
 
@@ -18,10 +18,10 @@ const Header = () => {
     })
   }
   return (
-    <header>
-        {accessToken && <button onClick={onButtonClick}>Logout</button>}
-    </header>
+    <div>
+        {accessToken && <button className="logout-button" onClick={onButtonClick}>Logout</button>}
+    </div>
   )
 }
 
-export default Header
+export default Logout
